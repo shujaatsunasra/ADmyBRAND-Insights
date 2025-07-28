@@ -59,76 +59,86 @@ const AnimatedPage: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 };
 
 const AppRoutes: React.FC = () => {
+  console.log('AppRoutes rendering');
+  
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Navigate to="/dashboard" replace />} />
-        <Route path="dashboard" element={
-          <AnimatedPage>
-            <Suspense fallback={<LoadingOverlay />}>
-              <Dashboard />
-            </Suspense>
-          </AnimatedPage>
-        } />
-        <Route path="customers" element={
-          <AnimatedPage>
-            <Suspense fallback={<LoadingOverlay />}>
-              <Customers />
-            </Suspense>
-          </AnimatedPage>
-        } />
-        <Route path="tasks" element={
-          <AnimatedPage>
-            <Suspense fallback={<LoadingOverlay />}>
-              <Tasks />
-            </Suspense>
-          </AnimatedPage>
-        } />
-        <Route path="projects" element={
-          <AnimatedPage>
-            <Suspense fallback={<LoadingOverlay />}>
-              <Projects />
-            </Suspense>
-          </AnimatedPage>
-        } />
-        <Route path="revenue" element={
-          <AnimatedPage>
-            <Suspense fallback={<LoadingOverlay />}>
-              <Revenue />
-            </Suspense>
-          </AnimatedPage>
-        } />
-        <Route path="pipeline" element={
-          <AnimatedPage>
-            <Suspense fallback={<LoadingOverlay />}>
-              <Pipeline />
-            </Suspense>
-          </AnimatedPage>
-        } />
-        <Route path="analytics" element={
-          <AnimatedPage>
-            <Suspense fallback={<LoadingOverlay />}>
-              <Analytics />
-            </Suspense>
-          </AnimatedPage>
-        } />
-        <Route path="settings" element={
-          <AnimatedPage>
-            <Suspense fallback={<LoadingOverlay />}>
-              <Settings />
-            </Suspense>
-          </AnimatedPage>
-        } />
-        <Route path="*" element={<Navigate to="/dashboard" replace />} />
-      </Route>
-    </Routes>
+    <div style={{ minHeight: '100vh', background: 'blue', color: 'white', padding: '20px' }}>
+      <h1>Routes Container</h1>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Navigate to="/dashboard" replace />} />
+          <Route path="dashboard" element={
+            <AnimatedPage>
+              <Suspense fallback={<LoadingOverlay />}>
+                <Dashboard />
+              </Suspense>
+            </AnimatedPage>
+          } />
+          <Route path="customers" element={
+            <AnimatedPage>
+              <Suspense fallback={<LoadingOverlay />}>
+                <Customers />
+              </Suspense>
+            </AnimatedPage>
+          } />
+          <Route path="tasks" element={
+            <AnimatedPage>
+              <Suspense fallback={<LoadingOverlay />}>
+                <Tasks />
+              </Suspense>
+            </AnimatedPage>
+          } />
+          <Route path="projects" element={
+            <AnimatedPage>
+              <Suspense fallback={<LoadingOverlay />}>
+                <Projects />
+              </Suspense>
+            </AnimatedPage>
+          } />
+          <Route path="revenue" element={
+            <AnimatedPage>
+              <Suspense fallback={<LoadingOverlay />}>
+                <Revenue />
+              </Suspense>
+            </AnimatedPage>
+          } />
+          <Route path="pipeline" element={
+            <AnimatedPage>
+              <Suspense fallback={<LoadingOverlay />}>
+                <Pipeline />
+              </Suspense>
+            </AnimatedPage>
+          } />
+          <Route path="analytics" element={
+            <AnimatedPage>
+              <Suspense fallback={<LoadingOverlay />}>
+                <Analytics />
+              </Suspense>
+            </AnimatedPage>
+          } />
+          <Route path="settings" element={
+            <AnimatedPage>
+              <Suspense fallback={<LoadingOverlay />}>
+                <Settings />
+              </Suspense>
+            </AnimatedPage>
+          } />
+          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        </Route>
+      </Routes>
+    </div>
   );
 };
 
 const App: React.FC = () => {
+  console.log('App component rendering');
+  
   return (
     <AppProvider>
       <Router>
+        <div style={{ position: 'fixed', top: 0, left: 0, zIndex: 9999, background: 'red', color: 'white', padding: '5px' }}>
+          App is loading...
+        </div>
         <AppRoutes />
       </Router>
     </AppProvider>
