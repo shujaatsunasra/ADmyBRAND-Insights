@@ -224,5 +224,3 @@ The build artifacts will be stored in the `dist/` directory, ready for deploymen
 ---
 
 Built with passion for the ADmyBRAND AI Vibe Coder assessment, showcasing modern React development practices and AI-assisted workflows.
-
-
