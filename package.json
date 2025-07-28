@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/username/ADmyBRAND-Insights.git"
+    "url": "git+https://github.com/shujaatsunasra/ADmyBRAND-Insights.git"
   },
   "keywords": [
     "crm",
@@ -44,5 +44,5 @@
   ],
   "author": "ADmyBRAND",
   "license": "MIT",
-  "homepage": "https://username.github.io/ADmyBRAND-Insights"
+  "homepage": "https://shujaatsunasra.github.io/ADmyBRAND-Insights"
 }
