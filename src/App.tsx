@@ -128,7 +128,7 @@ const AppRoutes: React.FC = () => {
 const App: React.FC = () => {
   return (
     <AppProvider>
-      <Router basename="/ADmyBRAND-Insights">
+      <Router>
         <AppRoutes />
       </Router>
     </AppProvider>
